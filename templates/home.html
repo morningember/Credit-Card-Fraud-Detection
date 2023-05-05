@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      form {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+      .container{
+        width: 75%;
+        margin: 0 auto;
+      }
+      input {
+        width: 30%;
+        padding: 12px 20px;
+        margin: 0 8px;
+        box-sizing: border-box;
+        border-radius: 4px;
+        border: 1px solid gray;
+      }
+      h1 {
+        text-align: center;
+        margin: 50px auto;
+      }
+      button {
+        width: 70%;
+        margin: 0 8px;
+        background-color: salmon;
+        padding: 10px;
+        border: none;
+        font-size: 25px;
+        text-transform: uppercase;
+      }
+      .prediction {
+        font-size: 50px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Credit Card Fraud Detection System</h1>
+      <div class="login">
+        <form action="{{url_for('predict')}}" method="post">
+          <input type="text" name="V1" placeholder="V1" required /><br />
+          <input type="text" name="V2" placeholder="V2" required /><br />
+          <input type="text" name="V3" placeholder="V3" required /><br />
+          <input type="text" name="V4" placeholder="V4" required /><br />
+          <input type="text" name="V5" placeholder="V5" required /><br />
+          <input type="text" name="V6" placeholder="V6" required /><br />
+          <input type="text" name="V7" placeholder="V7" required /><br />
+          <input type="text" name="V8" placeholder="V8" required /><br />
+          <input type="text" name="V9" placeholder="V9" required /><br />
+          <input type="text" name="V10" placeholder="V10" required /><br />
+          <input type="text" name="V11" placeholder="V11" required /><br />
+          <input type="text" name="V12" placeholder="V12" required /><br />
+          <input type="text" name="V13" placeholder="V13" required /><br />
+          <input type="text" name="V14" placeholder="V14" required /><br />
+          <input type="text" name="V15" placeholder="V15" required /><br />
+          <input type="text" name="V16" placeholder="V16" required /><br />
+          <input type="text" name="V17" placeholder="V17" required /><br />
+          <input type="text" name="V18" placeholder="V18" required /><br />
+          <input type="text" name="V19" placeholder="V19" required /><br />
+          <input type="text" name="V20" placeholder="V20" required /><br />
+          <input type="text" name="V21" placeholder="V21" required /><br />
+          <input type="text" name="V22" placeholder="V22" required /><br />
+          <input type="text" name="V23" placeholder="V23" required /><br />
+          <input type="text" name="V24" placeholder="V24" required /><br />
+          <input type="text" name="V25" placeholder="V25" required /><br />
+          <input type="text" name="V26" placeholder="V26" required /><br />
+          <input type="text" name="V27" placeholder="V27" required /><br />
+          <input type="text" name="V28" placeholder="V28" required /><br />
+          <input
+            type="text"
+            name="Amount"
+            placeholder="Amount"
+            required
+          /><br />
+
+          <button type="submit">Submit</button>
+        </form>
+        <br />
+        <br />
+      </div>
+      <div class="prediction">{{prediction_text}}</div>
+    </div>
+  </body>
+</html>
